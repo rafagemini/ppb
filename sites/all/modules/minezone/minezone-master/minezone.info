@@ -1,0 +1,4 @@
+name = Minezone
+description = Blank project with two pages to test code
+core = 7.x
+dependencies[] = devel

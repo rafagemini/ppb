@@ -1,0 +1,34 @@
+<?php 
+/**
+ * Please do not commit to this project
+ */
+
+function minezone_menu() {
+  $items = array();
+  
+  $items['minezone/page'] = array(
+    'title' => 'MineZone Page',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'minezone_page',
+    'access callback' => TRUE,
+    'file' => 'minezone.page.inc',
+  );
+  
+  $items['minezone/form'] = array(
+    'title' => 'MineZone Form',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array("minezone_form"),
+    'access callback' => TRUE,
+    'file' => 'minezone.form.inc',
+  );
+  
+  return $items;
+}
+
+/**
+ * Implements hook_init()
+ */
+function minezone_init() {
+
+}
